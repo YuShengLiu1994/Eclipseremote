@@ -9,7 +9,7 @@ public class Jdbc {
 
 	public static void main(String[] args) {
 		try {
-			Class.forName("com.mysql.jdbc.Driver"); // ¼ÓÔØMYSQL JDBCÇı¶¯³ÌĞò
+			Class.forName("com.mysql.jdbc.Driver"); // ï¿½ï¿½ï¿½ï¿½MYSQL JDBCï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 // Class.forName("org.gjt.mm.mysql.Driver");
 			System.out.println("Success loading Mysql Driver!");
 		} catch (Exception e) {
@@ -18,7 +18,7 @@ public class Jdbc {
 		}
 		try {
 			Connection connect = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/sys?useUnicode=true&characterEncoding=utf8", "root", "password");// javaÕâ¸ö¿ÕÌîĞ´µÄÊÇÄã×Ô¼ºÉèµÄÃÜÂë
+					"jdbc:mysql://localhost:3306/sys?useUnicode=true&characterEncoding=utf8", "root", "password");// javaï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			// Connection connect =
 			// DriverManager.getConnection("jdbc:mysql://localhost:3306/sys?useSSL=false&serverTimezone=UTC",
 			// "root",
@@ -26,8 +26,9 @@ public class Jdbc {
 			System.out.println("Success connect Mysql server!");
 			Statement stmt = connect.createStatement();
 			ResultSet rs = stmt.executeQuery("select * from table1");
-			// user ÎªÄã±íµÄÃû³Æ£¬¿ÉÒÔÔÚMySQLÃüÁîĞĞÓÃshow tables£»ÏÔÊ¾
+			// user Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½MySQLï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½show tablesï¿½ï¿½ï¿½ï¿½Ê¾
 			while (rs.next()) {
+				// æ›´æ”¹æ–‡ä»¶æµ‹è¯•æäº¤
 				System.out.println(rs.getString("name"));
 			}
 		} catch (Exception e) {
