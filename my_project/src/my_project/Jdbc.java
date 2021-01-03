@@ -28,7 +28,7 @@ public class Jdbc {
 			ResultSet rs = stmt.executeQuery("select * from table1");
 			// user Ϊ�������ƣ�������MySQL��������show tables����ʾ
 			while (rs.next()) {
-				// 更改文件测试提交
+				// 更改文件测试提交   dfsdfafsadf
 				System.out.println(rs.getString("name"));
 			}
 		} catch (Exception e) {
